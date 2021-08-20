@@ -21,7 +21,7 @@ const AddContact = () => {
     const checkNumber = contacts.find(
       (contact) => contact.number === parseInt(number) && number
     );
-    
+
     if (!name || !email || !number) {
       return toast.warning("Please fill in all the fields");
     }
@@ -33,7 +33,7 @@ const AddContact = () => {
     }
 
     const data = {
-      id: contacts[contacts.length - 1].id + 1,
+      id: contacts.length,
       name,
       email,
       number,

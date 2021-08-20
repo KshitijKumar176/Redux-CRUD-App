@@ -30,7 +30,6 @@ const contactReducer = (state = initialState, action) => {
       const contactList = state.filter(
         (contact) => contact.id !== action.payload
       );
-      console.log(action.payload);
 
       state = contactList;
       return state;

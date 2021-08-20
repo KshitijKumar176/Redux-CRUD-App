@@ -24,7 +24,7 @@ const Home = () => {
         <div className="col-md-10 mx-auto">
           <table className="table table-hover">
             <thead className="text-white bg-dark text-center">
-              <tr>
+              <tr className="text-start">
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
@@ -32,7 +32,7 @@ const Home = () => {
                 <th scope="col">Action</th>
               </tr>
             </thead>
-            <tbody className="">
+            <tbody>
               {contacts.map((contact, id) => (
                 <tr key={id}>
                   <td>{id + 1}</td>
@@ -42,14 +42,14 @@ const Home = () => {
                   <td>
                     <Link
                       to={`/edit/${contact.id}`}
-                      className="btn btn-small btn-primary mr-1"
+                      className="btn btn-small btn-primary"
                     >
                       Edit
                     </Link>
                     <button
                       type="button"
                       onClick={() => deleteContact(contact.id)}
-                      className="btn btn-danger btn-small"
+                      className="btn btn-danger btn-small ms-2"
                     >
                       Delete
                     </button>
